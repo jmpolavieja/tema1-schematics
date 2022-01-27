@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "HTTPAngularService",
+  "title": "Servicio Http para Angular",
+  "type": "object",
+  "additionalProperties": false,
+  "description": "Crea un servicio Angular con HttpClient y funciones CRUD.",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "El nombre del servicio",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "x-prompt": "¿Cuál es el nombre del servicio?"
+    },
+    "object": {
+      "type": "string",
+      "description": "El tipo de objeto que devuelve el servicio.",
+      "x-prompt": "¿Cuál es el tipo de datos que devuelve el servicio?"
+    },
+    "url": {
+      "type": "string",
+      "description": "El Endpoint al que atacar.",
+      "x-prompt": "¿Cuál es el ENDPOINT del servicio (por ejemplo: api/contactos)?"
+    },
+    "host": {
+      "type": "string",
+      "description": "El host al que atacar.",
+      "x-prompt": "¿Cuál es el HOST de la API?",
+      "default": "localhost"
+    },
+    "port": {
+      "type": "string",
+      "description": "El puerto al que atacar.",
+      "x-prompt": "¿Cuál es el PUERTO de la API?",
+      "default": "8080"
+    },
+    "findOneByID": {
+      "type": "boolean",
+      "description": "Si se desea incluir el método findByID() en el servicio.",
+      "default": false
+    },
+    "path": {
+      "type": "string",
+      "format": "path",
+      "description": "La ruta dentro del proyecto donde se va a alojar el servicio.",
+      "visible": false
+    },
+    "project": {
+      "type": "string",
+      "description": "El proyecto dobnde se va a alojar el servicio..",
+      "$default": {
+        "$source": "projectName"
+      }
+    }
+  },
+  "required": [
+    "name",
+    "object",
+    "url"
+  ]
+}

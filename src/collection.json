@@ -1,0 +1,19 @@
+{
+  "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "tema1-schematics": {
+      "description": "Primer ejercicio del curso de angular avanzado.",
+      "factory": "./tema1-schematics/index#tema1Schematics"
+    },
+    "hola": {
+      "description": "A blank schematic.",
+      "factory": "./hola/index#hola",
+      "schema": "./hola/schema.json"
+    },
+    "http-service": {
+      "description": "A blank schematic.",
+      "factory": "./http-service/index#httpService",
+      "schema": "./http-service/schema.json"
+    }
+  }
+}

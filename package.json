@@ -1,0 +1,30 @@
+{
+  "name": "tema1-schematics",
+  "version": "0.0.0",
+  "description": "A blank schematics",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && jasmine src/**/*_spec.js",
+    "build:watch": "tsc -p tsconfig.json --watch"
+  },
+  "keywords": [
+    "schematics"
+  ],
+  "author": "",
+  "license": "MIT",
+  "schematics": "./src/collection.json",
+  "dependencies": {
+    "@angular-devkit/core": "^12.2.15",
+    "@angular-devkit/schematics": "^12.2.15",
+    "@angular/common": "^12.2.15",
+    "@angular/core": "^12.2.15",
+    "@schematics/angular": "^12.2.15",
+    "rxjs": "^7.5.2",
+    "typescript": "~4.5.5"
+  },
+  "devDependencies": {
+    "@types/jasmine": "~3.10.0",
+    "@types/node": "^12.11.1",
+    "jasmine": "^3.5.0"
+  }
+}

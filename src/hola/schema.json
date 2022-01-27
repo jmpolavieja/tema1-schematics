@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "HolaSchema",
+  "title": "Tema1_HolaSchema",
+  "type": "object",
+  "description": "Crea un archivo js con un saludo.",
+  "additionalProperties": false,
+  "properties": {
+    "nombre": {
+      "type": "string",
+      "description": "El nombre de la persona a la que saludar.",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "x-prompt": "¿A quien te gustaría saludar?"
+    }
+  },
+  "required": ["nombre"]
+}
